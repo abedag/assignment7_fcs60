@@ -41,5 +41,20 @@ class BankAccount {
     this.history = [];
   }
 
+  deposit(amount) {
+    if (amount > 0) { 
+      this.balance += amount;
+      console.log(`${this.ownerName} deposited $${amount}`);
+      const depo = `Deposited $${amount}`;
+      this.history.push(depo);
+    
+    } else { 
+      console.log("Invalid input. Please enter a positive number");
+    }
+  }
+
+
+
+
 }
 
