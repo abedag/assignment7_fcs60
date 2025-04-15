@@ -85,3 +85,22 @@ class BankAccount {
   }
 }
 
+const acc1 = new BankAccount("John", 500);
+const acc2 = new BankAccount("Sara", 300);
+
+acc1.deposit(300)
+acc2.deposit(200)
+
+console.log(acc1.getSummary())
+console.log(acc2.getSummary())
+
+acc1.withdraw(100)
+acc2.withdraw(300)
+
+acc1.transferTo(acc2, 300)
+
+console.log(acc1.printHistory())
+console.log(acc2.printHistory())
+
+console.log(acc1.getSummary())
+console.log(acc2.getSummary())
