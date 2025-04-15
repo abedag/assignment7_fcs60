@@ -10,7 +10,11 @@ function generateReports(students) {
     else if (average >= 60) { grade = "D" }
     else { grade = "F" }
 
-
+    return {
+      name: student.name,
+      average: average,
+      grade: grade
+    }
   })
 }
 
