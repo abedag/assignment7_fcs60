@@ -31,3 +31,15 @@ const updated = display.map(student => {
 }).join('\n');
 
 document.getElementById("Output").textContent = updated;
+
+
+
+class BankAccount {
+  constructor(ownerName, initialBalance) {
+    this.ownerName = ownerName;
+    this.balance = initialBalance;
+    this.history = [];
+  }
+
+}
+
