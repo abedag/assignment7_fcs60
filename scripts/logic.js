@@ -26,3 +26,7 @@ const students = [
 
 const display = generateReports(students);
 
+const updated = display.map(student => {
+  return `Name: ${student.name}, Average: ${student.average}, Grade: ${student.grade}`;
+}).join('\n');
+
