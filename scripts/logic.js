@@ -53,6 +53,16 @@ class BankAccount {
     }
   }
 
+  withdraw(amount) {
+    if (amount < this.balance) {
+      this.balance -= amount;
+      console.log(`${this.ownerName} withdrew $${amount}`);
+      const withd = `Withdrew $${amount}`;
+      this.history.push(withd);
+    
+    } else { console.log("Insufficient balance") }
+  }
+
 
 
 
