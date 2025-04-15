@@ -80,6 +80,8 @@ class BankAccount {
     return `${this.ownerName}'s balance is $${this.balance}`;
   }
 
-
+  printHistory() {
+    return this.history;
+  }
 }
 
