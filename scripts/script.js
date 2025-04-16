@@ -14,4 +14,7 @@ button.addEventListener("click", function () {
     li.classList.toggle("completed");
   });
 
+  list.appendChild(li);
+
+  input.value = "";
 })
