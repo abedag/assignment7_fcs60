@@ -7,5 +7,8 @@ button.addEventListener("click", function () {
 
   if (taskText === "") return;
 
+  const li = document.createElement("li");
+  li.textContent = taskText;
+
 
 })
