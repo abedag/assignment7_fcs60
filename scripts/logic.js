@@ -1,3 +1,6 @@
+//There is a time complexity of O(n) where n is the input (students)
+//There is a time complexity of O(m) where m is the number of scores for each student
+//The overall time complexity is O(n*m)
 function generateReports(students) {
   return students.map(student => {
     const total = student.scores.reduce((sum, score) => sum + score ,0);
@@ -33,14 +36,14 @@ const updated = display.map(student => {
 document.getElementById("Output").textContent = updated;
 
 
-
+// ==> The time complexity of this class is O(1) since all methods are constant time operations 
 class BankAccount {
   constructor(ownerName, initialBalance) {
     this.ownerName = ownerName;
     this.balance = initialBalance;
     this.history = [];
   }
-
+//O(1)
   deposit(amount) {
     if (amount > 0) { 
       this.balance += amount;
@@ -52,7 +55,7 @@ class BankAccount {
       console.log("Invalid input. Please enter a positive number");
     }
   }
-
+//O(1)
   withdraw(amount) {
     if (amount < this.balance) {
       this.balance -= amount;
@@ -62,7 +65,7 @@ class BankAccount {
     
     } else { console.log("Insufficient balance") }
   }
-
+// O(1)
   transferTo(anotherAccount, amount) {
     if (amount <= this.balance) {
       this.balance -= amount;
@@ -75,11 +78,11 @@ class BankAccount {
       console.log("Transfer failed: Insufficient balance");
     }
   }
-
+//O(1)
   getSummary() {
     return `${this.ownerName}'s balance is $${this.balance}`;
   }
-
+// O(1) -- When iterating through history array then it will be O(n)
   printHistory() {
     return this.history;
   }
